@@ -20,16 +20,6 @@
 </script>
 </head>
 <body>
-<!-- 제주몽 메인으로 돌아가기 -->
-<style>
-.jjm-bar{position:relative;z-index:50;padding:calc(8px + env(safe-area-inset-top,0px)) max(14px,env(safe-area-inset-left,0px)) 8px;background:#0b4f6c}
-.jjm-home{display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 5px;border-radius:999px;background:rgba(255,255,255,.16);color:#fff;text-decoration:none;font:700 14px/1 -apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;-webkit-tap-highlight-color:transparent}
-.jjm-home img{width:28px;height:28px;border-radius:50%;display:block}
-.jjm-home:active{opacity:.7}
-@media print{.jjm-bar{display:none}}
-</style>
-<div class="jjm-bar"><a class="jjm-home" href="https://jejumong.github.io/" aria-label="제주몽 메인 페이지로"><img src="data:image/png;base64,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" alt="">‹ 제주몽 홈</a></div>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
 <style>
@@ -42,6 +32,7 @@
   --food:#1f7a99; --food-soft:#d8ebf2;
   --tip:#7a5aa6; --tip-soft:#ebe3f5;
   --spot:#b0405e; --spot-soft:#f6dfe5;
+  --village:#9a6a00; --village-soft:#f6ebcc;
   --today:#e2702a;
   --display:"Gowun Batang", "Nanum Myeongjo", serif;
   --body:"IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
@@ -49,11 +40,11 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#17191b; --surface:#202326; --fg:#ecebe6; --muted:#9a9ea1; --line:#33373b; --basalt:#c9c7c0;
   --fest:#f08a45; --fest-soft:#3d2a1d; --view:#7cb866; --view-soft:#243321;
-  --food:#4fb0d0; --food-soft:#1b313a; --tip:#ad8fd8; --tip-soft:#2e2639; --spot:#e17b95; --spot-soft:#3a2229; --today:#f08a45; color-scheme:dark}}
+  --food:#4fb0d0; --food-soft:#1b313a; --tip:#ad8fd8; --tip-soft:#2e2639; --spot:#e17b95; --spot-soft:#3a2229; --village:#e0b041; --village-soft:#3a3018; --today:#f08a45; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#17191b; --surface:#202326; --fg:#ecebe6; --muted:#9a9ea1; --line:#33373b; --basalt:#c9c7c0;
   --fest:#f08a45; --fest-soft:#3d2a1d; --view:#7cb866; --view-soft:#243321;
-  --food:#4fb0d0; --food-soft:#1b313a; --tip:#ad8fd8; --tip-soft:#2e2639; --spot:#e17b95; --spot-soft:#3a2229; --today:#f08a45; color-scheme:dark}
+  --food:#4fb0d0; --food-soft:#1b313a; --tip:#ad8fd8; --tip-soft:#2e2639; --spot:#e17b95; --spot-soft:#3a2229; --village:#e0b041; --village-soft:#3a3018; --today:#f08a45; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.6}
 .wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 56px;display:flex;flex-direction:column;gap:22px}
@@ -95,6 +86,12 @@ button:focus-visible,select:focus-visible{outline:2px solid var(--fest);outline-
 .c-food{background:var(--food-soft);color:var(--food)} .d-food{background:var(--food)}
 .c-tip{background:var(--tip-soft);color:var(--tip)} .d-tip{background:var(--tip)}
 .c-spot{background:var(--spot-soft);color:var(--spot)} .d-spot{background:var(--spot)}
+.c-village{background:var(--village-soft);color:var(--village)} .d-village{background:var(--village);border-radius:2px!important}
+.more-link{font-size:14px;font-weight:600;color:var(--village);text-decoration:none;align-self:flex-start;padding:4px 0}
+.more-link:hover{text-decoration:underline}
+header .updated{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:13.5px;color:var(--muted)}
+.updated i{flex:none;width:9px;height:9px;border-radius:2px;background:var(--village);display:inline-block}
+.updated span{min-width:0}
 .best{font-size:13.5px;background:var(--spot-soft);color:var(--fg);border-radius:6px;padding:7px 10px}
 .best b{color:var(--spot);font-weight:600;margin-right:4px}
 @media (max-width:640px){
@@ -155,7 +152,8 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
 <div class="wrap">
   <header>
     <h1>제주 열두 달 달력</h1>
-    <p>달마다 제주에서 열리는 축제, 제철 풍경과 먹거리, 여행 시기 팁을 한 장에 모았어요. 날짜를 누르면 그날 볼 수 있는 것만 추려 보여 줍니다.</p>
+    <p>달마다 제주에서 열리는 축제와 마을 행사, 제철 풍경과 먹거리, 여행 시기 팁을 한 장에 모았어요. 날짜를 누르면 그날 볼 수 있는 것만 추려 보여 줍니다.</p>
+    <p class="updated" id="updated"><i aria-hidden="true"></i><span id="updtext"></span></p>
   </header>
 
   <div class="bar">
@@ -187,14 +185,17 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--line);paddin
   </section>
 
   <footer>
-    축제 날짜 중 ‘2026 확정’ 표시는 2026년 공식 발표 기준이고, 해마다 바뀝니다. ‘해마다 이맘때’ 표시는 평년 기준 대략적인 시기예요. 꽃 개화와 억새·단풍 절정은 날씨에 따라 1~2주 앞당겨지거나 늦어질 수 있고, 숙박 가격은 숙소마다 다르니 예약 전에 꼭 확인하세요.
+    ‘마을 행사’는 지역 신문과 행사 안내에서 찾은 그해 일정이에요. 갑자기 바뀌거나 취소될 수 있으니 카드의 ‘행사 안내 보기’에서 한 번 더 확인하세요. 축제 날짜 중 ‘2026 확정’ 표시는 2026년 공식 발표 기준이고, 해마다 바뀝니다. ‘해마다 이맘때’ 표시는 평년 기준 대략적인 시기예요. 꽃 개화와 억새·단풍 절정은 날씨에 따라 1~2주 앞당겨지거나 늦어질 수 있고, 숙박 가격은 숙소마다 다르니 예약 전에 꼭 확인하세요.
   </footer>
 </div>
 
 <script>
-const CATS={spot:"명소 적기",fest:"축제·행사",view:"풍경·꽃",food:"제철 먹거리",tip:"여행 팁"};
+const CATS={spot:"명소 적기",fest:"축제·행사",village:"마을 행사",view:"풍경·꽃",food:"제철 먹거리",tip:"여행 팁"};
 // [시작월,시작일,끝월,끝일,분류,제목,설명,장소,확정연도(없으면 해마다),즐기는 요령]
 const E=[
+ [11,15,12,31,"fest","휴애리 동백축제","분홍빛 애기동백이 정원 가득 피는 겨울 축제. 감귤 따기 체험도 함께 할 수 있어요.","서귀포 남원읍 신례동로 256 휴애리"],
+ [12,31,12,31,"fest","대정 동일 해넘이축제","노을 지는 포구에서 달집을 태우며 한 해를 보내는 마을 축제. 선셋 콘서트도 열려요. 날짜는 해마다 확인하세요.","서귀포 대정읍 동일리포구 일원"],
+ [1,1,1,1,"fest","서귀포 겨울바다 국제펭귄수영대회","새해 첫날 겨울 바다에 뛰어드는 이색 대회. 신청하지 않아도 구경과 공연 관람은 자유예요.","중문색달해수욕장"],
  [5,20,6,20,"spot","비자림 숲 산책","천년 비자나무 숲이 연둣빛 새잎으로 가장 싱그러운 때. 숲 향기를 내뿜는 피톤치드는 기온이 오르는 초여름부터 여름에 많아지고, 장마 전이라 길도 보송해요.","구좌읍 평대리 비자림",null,"문 여는 아침에 들어가면 사람이 적고 숲 공기가 가장 맑아요. 비 그친 다음 날 아침은 흙과 나무 향이 훨씬 진합니다."],
  [6,19,6,23,"spot","사려니숲 에코힐링 · 물찻오름 개방","평소 닫혀 있는 분화구 습지 물찻오름을 이 기간에만 해설사와 걸을 수 있어요. 출입이 막혀 있던 시험림 길도 함께 열려요.","제주시 교래리 사려니숲길 (붉은오름 입구)","2026","물찻오름 탐방은 하루 150명 선착순 예약제예요. 2026년에는 6월 10일부터 접수했으니, 매년 6월 초 공지를 챙겨 보세요."],
  [1,5,2,10,"spot","사려니숲 설경","눈 내린 다음 날, 곧게 뻗은 삼나무 숲길이 하얗게 덮여 전혀 다른 숲이 돼요.","사려니숲길 (붉은오름·비자림로 입구)",null,"한라산 입산이 부담스러울 때 눈 숲을 걷기 좋은 대안이에요. 눈 온 날은 516도로·비자림로 통제 여부를 먼저 확인하세요."],
@@ -247,28 +248,55 @@ const E=[
  [10,23,10,25,"fest","서귀포칠십리축제","거리 퍼레이드와 공연, 먹거리 장터가 있는 서귀포 대표 축제.","서귀포 천지연폭포 주차장 일대","2026"],
  [10,10,11,20,"view","억새 절정","오름 능선이 은빛 억새로 출렁여요. 해 질 녘 역광이 가장 아름답습니다.","새별오름, 따라비오름, 산굼부리, 아끈다랑쉬오름",null,"해 지기 1시간 전에 올라 역광으로 억새를 보세요. 백약이오름은 자연휴식년으로 출입이 제한돼 있으니 다른 오름을 고르세요."],
  [10,20,11,10,"view","한라산 단풍","계곡을 따라 붉게 물드는 한라산 가을.","천아계곡, 1100고지, 영실"],
- [11,5,11,7,"fest","제주올레걷기축제","사흘간 올레 코스를 함께 걷는 축제. 참가 신청은 미리 하세요.","제주올레 지정 코스","2026"],
+ [11,5,11,7,"fest","제주올레걷기축제","사흘간 올레 코스를 함께 걷는 축제. 참가 신청은 미리 하세요.","제주올레 19·20코스 (조천·김녕·하도 일원)","2026","온라인 신청은 마감됐지만 당일 현장 접수로 걸을 수 있어요. 하루만 골라 걸어도 됩니다."],
  [11,19,11,22,"fest","최남단방어축제","방어 맨손잡기와 방어 시식, 공연이 열리는 겨울 바다 축제.","대정읍 모슬포항 일원","2026"],
  [11,19,11,23,"fest","제주감귤박람회","감귤 직거래와 가족 체험, 공연. 사전예약하면 입장료가 절반이에요.","서귀포농업기술센터 제주농업생태원","2026"],
  [11,1,12,31,"food","노지감귤 따기 체험","주렁주렁 열린 귤을 직접 따 보는 시기. 농장마다 체험비와 가져갈 수 있는 양이 달라요.","서귀포·남원·효돈 일대 감귤농장"],
  [11,20,12,18,"tip","늦가을 비수기","단풍철이 끝나고 연말 전까지 숙박 요금이 내려가는 편이에요.","제주 전역"],
  [12,20,12,31,"tip","연말 성수기","크리스마스와 연말 해맞이 여행객이 몰려 숙박·렌터카가 오릅니다.","제주 전역"]
 ];
+/*LOCAL_EVENTS_START*/
+// 마을·소규모 행사. 매주 월요일 갱신. s=시작일, e=끝일(YYYY-MM-DD), w=요일 한정(0일~6토, 없으면 매일), u=출처·안내 링크
+const LAST_UPDATED="2026-10-31";
+const LOCAL=[
+ {s:"2026-10-31",e:"2026-11-01",t:"2026 제주발명축전",d:"로봇 조립, AI 레고, XR 과학탐구, 드론축구·드론레이싱 등 발명·과학 체험 부스 45개가 열려요. 오전 10시~오후 4시.",p:"제주시 조천읍 조천18길 11-1 조천체육관",tip:"아이와 함께 가기 좋아요. 드론축구와 전기카트 주행은 사람이 몰리니 오전에 먼저 들르세요.",u:"https://www.headlinejeju.co.kr/news/articleView.html?idxno=601173"},
+ {s:"2026-10-31",e:"2026-11-01",t:"마사회 제주목장 가을축제",d:"메밀밭 산책, 트랙터 마차 투어, 포니 당근 먹이주기, 버스킹·마술쇼, 농산물 직거래 장터와 푸드트럭. 무료, 오전 10시~오후 6시.",p:"한국마사회 제주목장",tip:"트랙터 마차는 목장 올레길을 완주한 사람에게 회당 21명 선착순이에요. 11시 첫 회를 노리세요.",u:"https://www.headlinejeju.co.kr/news/articleView.html?idxno=601334"},
+ {s:"2026-11-01",e:"2026-11-01",t:"제주밭담축제 마지막 날",d:"보름 동안 마을을 돌며 열린 제주밭담축제가 한림 옹포천에서 마무리돼요.",p:"제주시 한림읍 옹포천 일대",u:"https://www.koreaunionnews.com/2343713"},
+ {s:"2026-11-04",e:"2026-11-05",t:"제주시 소상공인 한마음 박람회",d:"바닷가 잔디밭에서 제주 소상공인 제품 구경·구매, 체험 부스, 함덕 멸치잡이를 소재로 한 창작공연과 밴드 공연이 열려요.",p:"제주시 조천읍 함덕해수욕장 잔디공원",tip:"방문객에게 구운 계란 한 판과 식빵을 선착순으로 나눠 줘요.",u:"https://www.kbsn.kr/news/article.html?no=854383"},
+ {s:"2026-11-07",e:"2026-11-08",t:"제주 자전거 축제",d:"7일은 시민복지타운에서 출발하는 도심 자전거 대행진(약 6km, 오전 10:30), 8일은 구좌체육관~송남포구 해안도로 52km 왕복 라이딩. 경쟁 없이 함께 달려요.",p:"7일 제주시 시민복지타운 · 8일 구좌 해안도로",tip:"관광객도 참가할 수 있어요. jejucycling.com에서 미리 신청하거나 현장 접수하세요.",u:"https://jejupod.com/2026/10/18/jeju-bicyclefestival/"},
+ {s:"2026-09-04",e:"2026-11-13",t:"거리예술제",d:"원도심 상점가 거리에서 열리는 거리 공연과 예술 프로그램.",p:"제주시 칠성로상점가, 연동 누웨마루거리",u:"https://recomarea.com/festival/FestivalMain?month=11"},
+ {s:"2026-04-01",e:"2026-12-09",w:[3],t:"계절이 들리는 원도심 버스킹",d:"매주 수요일, 제주 원도심 야외무대에서 열리는 작은 거리 공연.",p:"제주시 중앙로14길 18 제주아트플랫폼 1층 야외무대",u:"https://recomarea.com/festival/FestivalMain?month=11"},
+ {s:"2026-04-01",e:"2026-11-30",w:[6],t:"원도심 도보투어 (성안올레·별별투어)",d:"매주 토요일, 해설사와 함께 옛 제주성 안 골목을 걸으며 이야기를 듣는 투어.",p:"제주시 관덕로17길 27-1 고씨주택 출발",u:"https://recomarea.com/festival/FestivalMain?month=11"}
+];
+/*LOCAL_EVENTS_END*/
+function ymd(str){const [y,m,d]=str.split("-").map(Number);return {y,m,d,n:y*10000+m*100+d}}
+LOCAL.forEach(o=>{const a=ymd(o.s),b=ymd(o.e);const row=[a.m,a.d,b.m,b.d,"village",o.t,o.d,o.p,String(a.y),o.tip||""];row.abs={s:a.n,e:b.n,w:o.w,u:o.u,sy:a.y,ey:b.y};E.push(row)});
 const MSUB=["눈 덮인 한라산과 붉은 동백","입춘굿과 첫 매화","들불축제, 유채와 벚꽃","유채·청보리·고사리의 봄","녹차밭과 산철쭉","수국과 반딧불이, 장마","해변과 한치의 여름","해바라기와 극성수기","해녀축제와 가을 메밀","억새와 축제의 달","감귤과 방어","동백과 연말 해돋이"];
 const DOW=["일","월","화","수","목","금","토"];
 const now=new Date();
 let year=now.getFullYear()===2026||now.getFullYear()===2027?now.getFullYear():2026;
 let month=now.getMonth()+1, selDay=null;
-let on={spot:true,fest:true,view:true,food:true,tip:true};
+let on={spot:true,fest:true,village:true,view:true,food:true,tip:true};
 try{const s=JSON.parse(localStorage.getItem("jeju-cal-filter")||"null");if(s)on=Object.assign(on,s)}catch(e){}
 const $=id=>document.getElementById(id);
 function track(name,params){try{if(typeof gtag==="function")gtag("event",name,params)}catch(e){}}
 
 function key(m,d){return m*100+d}
-function covers(e,m,d){const s=key(e[0],e[1]),t=key(e[2],e[3]),k=key(m,d);return s<=t?(k>=s&&k<=t):(k>=s||k<=t)}
-function inMonth(e,m){const last=new Date(2027,m,0).getDate();for(let d=1;d<=last;d++)if(covers(e,m,d))return true;return false}
-function fmt(e){const a=`${e[0]}월 ${e[1]}일`,b=`${e[2]}월 ${e[3]}일`;return (e[0]===e[2]&&e[1]===e[3])?a:`${a} ~ ${b}`}
+function covers(e,m,d){
+  if(e.abs){const n=year*10000+m*100+d;if(n<e.abs.s||n>e.abs.e)return false;return !e.abs.w||e.abs.w.includes(new Date(year,m-1,d).getDay())}
+  const s=key(e[0],e[1]),t=key(e[2],e[3]),k=key(m,d);return s<=t?(k>=s&&k<=t):(k>=s||k<=t)}
+function inMonth(e,m){const last=new Date(year,m,0).getDate();for(let d=1;d<=last;d++)if(covers(e,m,d))return true;return false}
+function fmt(e){const a=`${e[0]}월 ${e[1]}일`,b=`${e[2]}월 ${e[3]}일`;let t=(e[0]===e[2]&&e[1]===e[3])?a:`${a} ~ ${b}`;if(e.abs&&e.abs.w)t=`매주 ${e.abs.w.map(i=>DOW[i]).join("·")}요일 · ~${b}`;return t}
 function visible(e){return on[e[4]]}
+/* 오늘 이전에 끝난 행사·시기는 숨김 (보고 있는 달 기준으로 그 회차의 끝날을 계산) */
+const TODAY=now.getFullYear()*10000+(now.getMonth()+1)*100+now.getDate();
+function endOf(e,m){
+  if(e.abs)return e.abs.e;
+  const s=key(e[0],e[1]),t=key(e[2],e[3]);
+  if(s<=t)return year*10000+t;
+  return (m*100+31>=s && m>=e[0]) ? (year+1)*10000+t : year*10000+t;
+}
+function live(e,m){return endOf(e,m)>=TODAY}
 
 function renderMonths(){
   $("months").innerHTML="";
@@ -290,7 +318,7 @@ function renderGrid(){
     const isToday=now.getFullYear()===year&&now.getMonth()+1===month&&now.getDate()===d;
     c.dataset.day=d;
     c.className="cell"+(wd===0?" sun":wd===6?" sat":"")+(isToday?" today":"")+(selDay===d?" sel":"");
-    const evs=E.filter(e=>visible(e)&&covers(e,month,d));
+    const evs=E.filter(e=>visible(e)&&live(e,month)&&covers(e,month,d));
     c.setAttribute("aria-label",`${month}월 ${d}일, ${evs.length}개 항목`);
     let h=`<span class="num">${d}</span>`;
     evs.slice(0,3).forEach(e=>h+=`<span class="pill c-${e[4]}">${e[5]}</span>`);
@@ -303,25 +331,30 @@ function renderGrid(){
 }
 function renderList(){
   const L=$("list");L.innerHTML="";
-  let evs=E.filter(e=>visible(e)&&(selDay?covers(e,month,selDay):inMonth(e,month)));
-  evs.sort((a,b)=>ORDER[a[4]]-ORDER[b[4]]||(a[0]===month?a[1]:0)-(b[0]===month?b[1]:0));
+  let evs=E.filter(e=>visible(e)&&live(e,month)&&(selDay?covers(e,month,selDay):inMonth(e,month)));
+  const span=e=>e.abs?(Date.UTC(Math.floor(e.abs.e/1e4),Math.floor(e.abs.e/100)%100-1,e.abs.e%100)-Date.UTC(Math.floor(e.abs.s/1e4),Math.floor(e.abs.s/100)%100-1,e.abs.s%100))/864e5+(e.abs.w?1000:0):0;
+  evs.sort((a,b)=>ORDER[a[4]]-ORDER[b[4]]||span(a)-span(b)||(a[0]===month?a[1]:0)-(b[0]===month?b[1]:0));
   $("ltitle").innerHTML=(selDay?`${month}월 ${selDay}일 볼거리`:`${month}월 볼거리`)+`<small>${evs.length}개</small>`;
   const cb=$("clearday");
   cb.setAttribute("aria-pressed",!selDay);
   cb.textContent=selDay?`${month}월 전체 보기`:`${month}월 전체 보는 중`;
   $("dayhint").hidden=!!selDay;
-  if(!evs.length){L.innerHTML=`<p class="empty">선택한 분류에 해당하는 항목이 없어요. 위에서 분류를 켜 보세요.</p>`;return}
+  if(!evs.length){
+    const past=year*10000+month*100+(selDay||new Date(year,month,0).getDate())<TODAY;
+    L.innerHTML=past?`<p class="empty">이 ${selDay?"날":"달"}의 행사와 볼거리는 모두 끝났어요. 위에서 달력 연도를 ${year+1}년으로 바꾸면 내년 같은 시기를 볼 수 있어요.</p>`:`<p class="empty">선택한 분류에 해당하는 항목이 없어요. 위에서 분류를 켜 보세요.</p>`;return}
   L.innerHTML=evs.map(itemHTML).join("");
 }
-const ORDER={spot:0,fest:1,view:2,food:3,tip:4};
-function dayEvents(d){return E.filter(e=>visible(e)&&covers(e,month,d)).sort((a,b)=>ORDER[a[4]]-ORDER[b[4]])}
+const ORDER={spot:0,fest:1,village:2,view:3,food:4,tip:5};
+function dayEvents(d){return E.filter(e=>visible(e)&&live(e,month)&&covers(e,month,d)).sort((a,b)=>ORDER[a[4]]-ORDER[b[4]])}
 function itemHTML(e){
   const fixed=e[8];
+  if(e.abs){return `<article class="item"><div class="top"><span class="tag c-village">${CATS.village}</span><span class="when">${fmt(e)}</span></div><h4>${e[5]}</h4><p>${e[6]}</p>${e[9]?`<div class="best"><b>이렇게 즐기세요</b>${e[9]}</div>`:""}<span class="place">장소 · ${e[7]}</span>${e.abs.u?`<a class="more-link" href="${e.abs.u}" target="_blank" rel="noopener">행사 안내 보기 ↗</a>`:""}</article>`}
   const badge=fixed?(String(year)===fixed?`<span class="badge ok">${fixed} 확정 일정</span>`:`<span class="badge">${fixed}년 일정 기준 · ${year}년 날짜는 발표 후 확인</span>`):`<span class="badge">해마다 이맘때</span>`;
   return `<article class="item"><div class="top"><span class="tag c-${e[4]}">${CATS[e[4]]}</span><span class="when">${fmt(e)}</span></div><h4>${e[5]}</h4><p>${e[6]}</p>${e[9]?`<div class="best"><b>이렇게 즐기세요</b>${e[9]}</div>`:""}<span class="place">장소 · ${e[7]}</span>${badge}</article>`;
 }
 
 function render(){
+  {const u=ymd(LAST_UPDATED);$("updtext").textContent=`마을 행사는 매주 월요일 새로 찾아 넣어요 · 최근 갱신 ${u.m}월 ${u.d}일`}
   $("year").value=year;
   $("mtitle").textContent=`${year}년 ${month}월`;
   $("msub").textContent=MSUB[month-1];
