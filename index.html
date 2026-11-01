@@ -20,16 +20,6 @@
 </script>
 </head>
 <body>
-<!-- 제주몽 메인으로 돌아가기 -->
-<style>
-.jjm-bar{position:relative;z-index:50;padding:calc(8px + env(safe-area-inset-top,0px)) max(14px,env(safe-area-inset-left,0px)) 8px;background:#0b4f6c}
-.jjm-home{display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 5px;border-radius:999px;background:rgba(255,255,255,.16);color:#fff;text-decoration:none;font:700 14px/1 -apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif;-webkit-tap-highlight-color:transparent}
-.jjm-home img{width:28px;height:28px;border-radius:50%;display:block}
-.jjm-home:active{opacity:.7}
-@media print{.jjm-bar{display:none}}
-</style>
-<div class="jjm-bar"><a class="jjm-home" href="https://jejumong.github.io/" aria-label="제주몽 메인 페이지로"><img src="https://jejumong.github.io/favicon.png" alt="">‹ 제주몽 홈</a></div>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
 <style>
@@ -274,9 +264,9 @@ const LOCAL=[
  {s:"2026-11-01",e:"2026-11-01",t:"제주밭담축제 마지막 날",d:"보름 동안 마을을 돌며 열린 제주밭담축제가 한림 옹포천에서 마무리돼요.",p:"제주시 한림읍 옹포천 일대",u:"https://www.koreaunionnews.com/2343713"},
  {s:"2026-11-04",e:"2026-11-05",t:"제주시 소상공인 한마음 박람회",d:"바닷가 잔디밭에서 제주 소상공인 제품 구경·구매, 체험 부스, 함덕 멸치잡이를 소재로 한 창작공연과 밴드 공연이 열려요.",p:"제주시 조천읍 함덕해수욕장 잔디공원",tip:"방문객에게 구운 계란 한 판과 식빵을 선착순으로 나눠 줘요.",u:"https://www.kbsn.kr/news/article.html?no=854383"},
  {s:"2026-11-07",e:"2026-11-08",t:"제주 자전거 축제",d:"7일은 시민복지타운에서 출발하는 도심 자전거 대행진(약 6km, 오전 10:30), 8일은 구좌체육관~송남포구 해안도로 52km 왕복 라이딩. 경쟁 없이 함께 달려요.",p:"7일 제주시 시민복지타운 · 8일 구좌 해안도로",tip:"관광객도 참가할 수 있어요. jejucycling.com에서 미리 신청하거나 현장 접수하세요.",u:"https://jejupod.com/2026/10/18/jeju-bicyclefestival/"},
- {s:"2026-09-04",e:"2026-11-13",t:"거리예술제",d:"원도심 상점가 거리에서 열리는 거리 공연과 예술 프로그램.",p:"제주시 칠성로상점가, 연동 누웨마루거리",u:"https://recomarea.com/festival/FestivalMain?month=11"},
- {s:"2026-04-01",e:"2026-12-09",w:[3],t:"계절이 들리는 원도심 버스킹",d:"매주 수요일, 제주 원도심 야외무대에서 열리는 작은 거리 공연.",p:"제주시 중앙로14길 18 제주아트플랫폼 1층 야외무대",u:"https://recomarea.com/festival/FestivalMain?month=11"},
- {s:"2026-04-01",e:"2026-11-30",w:[6],t:"원도심 도보투어 (성안올레·별별투어)",d:"매주 토요일, 해설사와 함께 옛 제주성 안 골목을 걸으며 이야기를 듣는 투어.",p:"제주시 관덕로17길 27-1 고씨주택 출발",u:"https://recomarea.com/festival/FestivalMain?month=11"}
+ {s:"2026-09-04",e:"2026-11-13",w:[5,6],t:"거리예술제",d:"밴드, 대중음악, 무용, 전통예술 공연이 거리에서 무료로 열려요. 누웨마루거리는 오후 7시~8시 30분, 칠성로상점가는 오후 2시~3시 30분.",p:"제주시 연동 누웨마루거리, 칠성로상점가",tip:"공연 장소와 요일은 회차마다 달라요. 제주시청 누리집 공지사항에서 이번 주 무대를 확인하세요.",u:"https://jejuzine.com/5477"},
+ {s:"2026-04-01",e:"2026-12-09",w:[3],t:"계절이 들리는 원도심 버스킹",d:"매주 수요일 낮, 원도심 야외무대에서 열리는 무료 버스킹 공연. 오전 11시 30분과 낮 12시 30분 두 번 열려요.",p:"제주시 중앙로14길 18 제주아트플랫폼 1층 야외무대",tip:"공연 시간이 바뀔 수 있으니 064-800-9171로 확인하고 가세요.",u:"https://m.visitjeju.net/kr/festival/view?contentsid=CNTS_300000000014266"},
+ {s:"2026-04-01",e:"2026-11-30",w:[6],t:"원도심 도보투어 (성안올레·별별투어)",d:"매주 토요일, 해설사와 함께 옛 제주성 안 골목을 걸으며 이야기를 듣는 투어. 11월에는 오전 9시 30분~낮 12시에 걸어요.",p:"제주시 관덕로17길 27-1 고씨주택 출발",tip:"제주착한여행 누리집에서 미리 신청해야 해요. 예약금 5,000원은 투어가 끝나면 탐나는전으로 돌려줘요.",u:"http://www.ihalla.com/article.php?aid=1775970023784526079"}
 ];
 /*LOCAL_EVENTS_END*/
 function ymd(str){const [y,m,d]=str.split("-").map(Number);return {y,m,d,n:y*10000+m*100+d}}
