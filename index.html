@@ -27,7 +27,9 @@
 .jjm-home img{width:28px;height:28px;border-radius:50%;display:block}
 .jjm-home:active{opacity:.7}
 @media print{.jjm-bar{display:none}}
+html.jjm-embed .jjm-bar{display:none}
 </style>
+<script>/* 제주이음 등 다른 사이트 안에 넣어 보여 줄 때는 제주몽 홈 버튼 숨김 */try{if(window.self!==window.top||/[?&]embed=1/.test(location.search))document.documentElement.classList.add("jjm-embed")}catch(e){document.documentElement.classList.add("jjm-embed")}</script>
 <div class="jjm-bar"><a class="jjm-home" href="https://jejumong.github.io/" aria-label="제주몽 메인 페이지로"><img src="https://jejumong.github.io/favicon.png" alt="">‹ 제주몽 홈</a></div>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
